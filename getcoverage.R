@@ -30,7 +30,7 @@ getCoverage <- function(whole_tx_table, transcript_cov, path_transcriptsID, outn
   covTable$cov = as.numeric(covTable$cov)
   theme_set(theme_gray(base_size = 12))
   ## combining two graphs - histogram and cumulative
-  for (i in c("=", "j", "o","u")) {
+  for (i in c("=", "j", "u")) {
     if (i == "=") {
       a = "conserved"
     } 
