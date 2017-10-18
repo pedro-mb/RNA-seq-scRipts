@@ -17,14 +17,8 @@ path_transcriptsID: transcriptsID is a file generated after parsing the ".tracki
 $ cat cuffcmp-C.tracking | cut -f1,2,4 > cuffcmp-C.ref.transcriptID.txt
 
 whole_tx_table and transcript_cov are dataframes obtained using ballgown, as below (copy from Ballgown tutorial) :
-# library(ballgown)
-# data_directory <- "stringTie_ballgown/stringTie-cafj10.ref-T10-comb" # path to coverage data obtained using stringtie
-# pattern <- "ballgown-BGI_ILU_" 
-# bg = ballgown(dataDir=data_directory, samplePattern=pattern, meas='all')
-# transcript_cov = texpr(bg, 'cov')
-# whole_tx_table = texpr(bg_filt, 'all') 
 
-### xmax and stp are plotting options, defining length of x axis (xmax) and setp (stp)           
+xmax and stp are plotting options, defining length of x axis (xmax) and setp (stp)           
 Default (complete = FALSE) run will generate histograms and cumulative density plots for most abundant classes of transcripts (conserved "="; novel isoforms "j"; unkown "u"; and generic exonic overlap "o")
 
 To create histograms and cumulative density plots for all  transcript classes use "complete = FALSE"
