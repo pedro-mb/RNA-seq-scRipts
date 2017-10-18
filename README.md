@@ -19,7 +19,7 @@ $ cat file.tracking | cut -f1,2,4 > transcriptID.txt
 
 * **outputID** is a string with a user ID to be added to plots filenames
 
-* **xmax** and **stp** are integers providing plotting options. They define length of x axis (xmax) and setp (stp) [default xmax = 4000, stp = 10]         
+* **xmax** and **stp** are integers providing plotting options. They define length of x axis (xmax) and step (stp) [default xmax = 4000, stp = 10]         
 
 * **complete** is a boolean option (default FALSE). Default run will generate histograms and cumulative density plots for most abundant classes of transcripts (conserved "="; novel isoforms "j"; unkown "u"; and generic exonic overlap "o"). To create histograms and cumulative density plots for all  transcript classes use "complete = TRUE"
 
