@@ -11,14 +11,16 @@ getcoverage.R contains an function [getCoverage(...)] that generates histograms 
 USAGE:
 
 coverageTable = getCoverage(whole_tx_table, transcript_cov,
-                 "/path/for/ref.transcriptID.txt", "outputID", complete = TRUE, xmax = 8000, stp = 20)
+                 PATH, outputID , complete = TRUE, xmax = int, stp = int)
                  
-path_transcriptsID: transcriptsID is a file generated after parsing the ".tracking" output file from gffcompare using the collowing bash command:
-$ cat cuffcmp-C.tracking | cut -f1,2,4 > cuffcmp-C.ref.transcriptID.txt
+whole_tx_table and transcript_cov are dataframes obtained using ballgown, see comment section in the script-
 
-whole_tx_table and transcript_cov are dataframes obtained using ballgown, as below (copy from Ballgown tutorial) :
+PATH is a string with full path to the transcriptsID file, which needs to be created by parsing the ".tracking" output file from gffcompare. use the collowing bash command:
+$ cat file.tracking | cut -f1,2,4 > transcriptID.txt
 
-xmax and stp are plotting options, defining length of x axis (xmax) and setp (stp)           
-Default (complete = FALSE) run will generate histograms and cumulative density plots for most abundant classes of transcripts (conserved "="; novel isoforms "j"; unkown "u"; and generic exonic overlap "o")
+outputID is a string with a user ID to be added to plots filenames
 
-To create histograms and cumulative density plots for all  transcript classes use "complete = FALSE"
+xmax and stp are integers providing plotting options. They define length of x axis (xmax) and setp (stp) [default xmax = 4000, stp = 10]         
+
+complete is a boolean option (default FALSE). Default run will generate histograms and cumulative density plots for most abundant classes of transcripts (conserved "="; novel isoforms "j"; unkown "u"; and generic exonic overlap "o"). To create histograms and cumulative density plots for all  transcript classes use "complete = TRUE"
+
