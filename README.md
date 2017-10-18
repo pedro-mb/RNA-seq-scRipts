@@ -3,7 +3,7 @@ This repository gathers a set of (very) basic scripts in R to analyse or parse d
 
 ### getcoverage.R 
 
-After transcript assembly, with "stringTie --merge" or cuffmerge, the final annotation file (.GTF) can be compared to original genome annotation using gffcompare utility (https://github.com/gpertea/gffcompare). This will classify transcripts as they relate to reference transcripts and collapse contained transfrags (intron-redundant) using -C option. To further evaluate the coverage of the assembled transcripts, the new annotation file is used as reference to generate coverage data [using Tablemaker (for Cufflinks annotation, https://github.com/leekgroup/tablemaker) or StringTie with "-e" and "-B" options (for StringTie annotation)]. 
+After transcript assembly, with "stringTie --merge" or cuffmerge, the final annotation file (.GTF) can be compared to original genome annotation using [gffcompare](https://github.com/gpertea/gffcompare) utility . This will classify transcripts as they relate to reference transcripts and collapse contained transfrags (intron-redundant) using -C option. To further evaluate the coverage of the assembled transcripts, the new annotation file is used as reference to generate coverage data [using Tablemaker (for Cufflinks annotation, https://github.com/leekgroup/tablemaker) or StringTie with "-e" and "-B" options (for StringTie annotation)]. 
 
 getcoverage.R contains an function [getCoverage(...)] that generates histograms for transcript coverage, grouping transcripts according to gffcompare classes ("=", "j", "e", "i", "o", "p", "s", "u", "x", "c", see http://cole-trapnell-lab.github.io/cufflinks/cuffcompare/index.html )
 
