@@ -9,8 +9,8 @@ getcoverage.R contains a function getCoverage(...) that generates histograms for
 
 USAGE:
 
-`coverageTable = getCoverage(whole_tx_table, transcript_cov,
-                 PATH, outputID , complete = TRUE, xmax = int, stp = int)`
+``` coverageTable = getCoverage(whole_tx_table, transcript_cov,
+                 PATH, outputID , complete = TRUE, xmax = int, stp = int) ```
                  
 * **whole_tx_table** and **transcript_cov** are data frames obtained using ballgown, see comment section in the script-
 
